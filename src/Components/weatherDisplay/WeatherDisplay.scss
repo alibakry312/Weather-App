@@ -1,0 +1,82 @@
+@import '../Rules/global_Rules';
+.weather-display{
+  width: 90%;
+  margin-bottom: 40px;
+  // #### Search Bar Section ###
+  .search-bar {
+    @include flex-center;
+    background-color: $blue;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 30px;
+
+    input{
+      flex: 1;
+      border: none;
+      outline: none;
+      padding-left: 5px;
+      background: transparent;
+      @include font-style(18px, 600, $gray)
+    }
+    .img{
+      @include flex-center;
+      width: 50px;
+      height: 130%;
+      border-left: 3px solid $gray;
+      cursor: pointer;
+
+      img{
+        width: 26px;
+      }
+    }
+  }
+
+  // ### Main Section ###
+  .main-display{
+    flex: 1;
+    display: grid;
+    gap: 20px;
+    padding: 30px 30px;
+    .current-temp{
+      @include flex-between;
+
+      .city-info{
+        .city{
+        @include font-style (70px,700,$blue);
+        }
+        p{
+          @include font-style(20px, 300, $gray)
+        }
+      }
+      .temp-box {
+        display: flex;
+        flex-direction: column;
+        
+        .temp{
+        @include font-style (70px,700,$gray);
+        margin-right: 30px;
+        &::after{
+          content: '';
+          width: 13px;
+          height: 13px;
+          background: transparent;
+          position: absolute;
+          border: 7px solid $gray;
+          border-radius: 50%;
+        }
+      }
+      p {
+        margin-left: 10px;
+        @include font-style($lg, 700, $blue)
+      }
+      }
+
+    }
+
+
+    .weather-info{
+      background: white;
+    }
+  }
+}
+

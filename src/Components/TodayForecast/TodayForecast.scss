@@ -1,0 +1,43 @@
+@import '../Rules/global_Rules';
+@import '../Rules/variables';
+
+.hourly-temp{
+  width: 90%;
+  margin-bottom: 40px;
+  .cards{
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+
+      .card{
+      @include flex-column;
+      background: $blue;
+      height: 120px;
+      justify-content: center;
+      border-radius: 10px;
+      position: relative;
+      &::after{
+        content: '';
+        width: 4px;
+        height: 4px;
+        background: transparent;
+        position: absolute;
+        right: 45px;
+        bottom: 30px;
+        border: 2px solid $gray;
+        border-radius: 50%;
+      }
+      .hour {
+        color: white;
+        @include font-style($sm, 600, $gray)
+      }
+      img {
+        width: 40px;
+        margin: 10px;
+      }
+      .temprature {
+        @include font-style($med, 600, $gray)
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import './Components/Rules/global_Rules';
+@import './Components/Rules/variables';
+
+.app {
+  display: flex;
+  .left {
+    @include flex-column;
+    width: 70%;
+  }
+}

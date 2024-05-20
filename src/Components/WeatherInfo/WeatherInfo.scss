@@ -1,0 +1,31 @@
+@import '../Rules/global_Rules';
+@import '../Rules/variables';
+
+.weather-info{
+  width: 90%;
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    .card {
+      background: $blue;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      .info {
+        p{
+          margin-bottom: 5px;
+        }
+      }
+      img {
+        width: 20px;
+        margin-right: 10px;
+        display: flex;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}
